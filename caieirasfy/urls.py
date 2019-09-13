@@ -19,14 +19,16 @@ from django.conf.urls import include
 from rest_framework import routers
 from rest_framework.authtoken.views import obtain_auth_token
 
+from artista.views import ArtistaViewSet
 from landing.views import MusicaViewSet
 
 router = routers.DefaultRouter()
 router.register(r'musica', MusicaViewSet)
+router.register(r'artista', ArtistaViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
-    path('auth-api', obtain_auth_token)
+    path('auth-api', obtain_auth_token),
 
 ]

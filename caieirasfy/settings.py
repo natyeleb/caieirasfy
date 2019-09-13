@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'landing',
     'rest_framework',
     'rest_framework.authtoken',
+    'artista',
 ]
 
 MIDDLEWARE = [

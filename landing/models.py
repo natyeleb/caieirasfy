@@ -8,18 +8,19 @@ class Musica(models.Model):
         max_length=50,
         verbose_name='Nome'
     )
+   tempo_reproducao = models.CharField(
+        max_length=50,
+        verbose_name='Tempo de reprodução'
+    )
    artista = models.CharField(
         max_length=50,
         verbose_name='Artista'
     )
-   genero_musica = models.CharField(
-        max_length=50,
-        verbose_name='Genero'
-    )
-   link = models.CharField(
+   genero_musical = models.CharField(
        max_length=255,
-       verbose_name='link da musica'
+       verbose_name='Genero musical'
    )
 
    def __str__(self):
        return self.nome + ' ' + self.artista
+

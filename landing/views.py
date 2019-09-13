@@ -12,7 +12,7 @@ from landing.serializers import MusicaSerializer
 
 
 class MusicaViewSet(viewsets.ModelViewSet):
-    filter_backends = (SearchFilter)
+    filter_backends = (SearchFilter,)
     search_fields = ['^nome', '^artista', '^genero_musical', '^link']
     queryset = Musica.objects.all()
     permission_classes = (IsAuthenticatedOrReadOnly,)
